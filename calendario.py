@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -398,4 +397,3 @@ for row_df in rows:
                 <p>Temperatura promedio</p>
             </div>
             """, unsafe_allow_html=True)
->>>>>>> 68a9cdb371875a5e8ab8ec095cd0af01c94d5ee8
