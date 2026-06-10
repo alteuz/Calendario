@@ -100,14 +100,14 @@ try:
         st.markdown('<div class="weather-card">', unsafe_allow_html=True)
         st.subheader("📊 Estadísticas climáticas mensuales (Mediana)")
         monthly_medians = calculate_monthly_medians(weather_records)
-        st.dataframe(monthly_medians, use_container_width=True)
+        st.dataframe(monthly_medians, width='stretch')
         st.markdown('</div>', unsafe_allow_html=True)
 
     with col_right:
         st.markdown('<div class="weather-card">', unsafe_allow_html=True)
         st.subheader("🌤️ Distribución de climas observados históricamente")
         climas_counts = weather_records['weather'].value_counts()
-        st.bar_chart(climas_counts, use_container_width=True)
+        st.bar_chart(climas_counts, width='stretch')
         st.markdown('</div>', unsafe_allow_html=True)
 
     # 4. Prediction Panel
@@ -150,10 +150,10 @@ try:
     if st.session_state.predictions_df is not None and st.session_state.predicted_month == selected_month:
         col_table, col_plot = st.columns([1, 1])
         with col_table:
-            st.dataframe(st.session_state.predictions_df, use_container_width=True)
+            st.dataframe(st.session_state.predictions_df, width='stretch')
         with col_plot:
             predictions_counts = st.session_state.predictions_df["Pronóstico del Clima"].value_counts()
-            st.bar_chart(predictions_counts, use_container_width=True)
+            st.bar_chart(predictions_counts, width='stretch')
     else:
         st.info("💡 Aún no se ha generado la predicción para este mes. Haz clic en 'Generar predicción diaria' para ver el pronóstico.")
     st.markdown('</div>', unsafe_allow_html=True)
