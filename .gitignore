@@ -1,0 +1,19 @@
+# Entornos virtuales
+.venv/
+venv/
+env/
+ENV/
+
+# Caché de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos pesados y binarios locales
+calendarioportable.zip
+pythonport/
+
+# Configuraciones de IDEs y editores
+.vscode/
+.idea/
+.DS_Store
